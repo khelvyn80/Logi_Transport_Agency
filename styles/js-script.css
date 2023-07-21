@@ -1,0 +1,43 @@
+/* working-page-styles.css */
+#content {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+  font-size: 40px;
+  color: #ffffffea;
+  text-align: center;
+  font-weight: 500;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  font-family: Algerian, serif;
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply the animation to the #content element for a cycle */
+#content {
+  animation: marqueeAnimation 12s linear 1; /* Adjust the duration (10s) and iteration count (2) as needed */
+}
+
+/* Create a reset animation to move the marquee back to its original position */
+@keyframes resetAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Apply the reset animation to the #content element after the marqueeAnimation completes */
+#content.animation-done {
+  animation: resetAnimation 0.01s linear forwards;
+}

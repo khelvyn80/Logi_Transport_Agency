@@ -1,0 +1,110 @@
+body {
+  background-image: url("images/working-page-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-top: 60px;
+  background-attachment: fixed;
+  font-family: 'segoe ui';
+}
+
+main {
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  flex-basis: 24%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+/* Media query for screens smaller than 600 pixels */
+@media screen and (max-width: 600px) {
+  .col {
+    flex-basis: 100%;
+  }
+}
+
+
+select {
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.7);
+  border: none;
+  /* width:; */
+}
+
+
+input {
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.7);
+  border: none;
+  /* border-color: white; */
+}
+
+
+button {
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.7);
+  border: none;
+  border-color: black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Default styles for the paragraph */
+p {
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10%; /* Default margin-top */
+}
+
+/* Media query for screens smaller than 13 inches */
+@media screen and (max-width: 1200px) {
+  p {
+    margin-top: 25%; 
+  }
+}
+
+/* Media query for screens between 13 inches and 15 inches */
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  p {
+    margin-top: 15%; 
+  }
+}
+
+/* Media query for screens larger than 15 inches */
+@media screen and (min-width: 1441px) {
+  p {
+    margin-top: 15%; 
+  }
+}

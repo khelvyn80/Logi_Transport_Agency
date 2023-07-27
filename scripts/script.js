@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (service === 'uber') {
       contentContainer.textContent = 'WELCOME TO UBER';
     } else if (service === 'glovo') {
-      contentContainer.textContent = 'WELCOME TO GLOVO';
+      contentContainer.textContent = 'WELCOME TO BOLT';
     } else if (service === 'stc') {
       contentContainer.textContent = 'WELCOME TO STC';
     } else if (service === 'metrobusgh') {

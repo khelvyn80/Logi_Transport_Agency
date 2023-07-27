@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form - Logi Transport</title>
+    <title>Sign Up Form - Logi Transport</title>
     <!-- font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link to the separate CSS file -->
@@ -30,27 +30,36 @@
                 <img src="styles/images/couple-with-luggage-reading-map.jpg" alt="Company Image">
             </div>
             <div class="sign-in-container">
-                <h1>Login</h1>
-                <div class="social-container">
+                <h1>Sign Up</h1>
+                <!-- <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div> -->
+                <!-- <p>or use your account</p> -->
+                <div class="infield">
+                    <input type="text" placeholder="Username" name="username" />
+                    <label></label>
                 </div>
-                <p>or use your account</p>
                 <div class="infield">
                     <input type="email" placeholder="Email" name="email" />
                     <label></label>
                 </div>
                 <div class="infield">
-                    <input type="password" placeholder="Password" />
+                    <input type="text" placeholder="Contact" name="contact" />
                     <label></label>
                 </div>
-                <a href="index.html"><button>Login</button></a>
-                <a href="#" class="forgot">Forgot your password?</a>
-                <div class="create-account">
-                    <p>Don't have an account?</p>
-                    <a href="signup.html" class="create-link">Create Account</a>
+                <div class="infield">
+                    <input type="password" placeholder="Password" name="password"/>
+                    <label></label>
                 </div>
+                <div class="infield">
+                    <input type="password" placeholder="Confirm Password" name="confirmPassword" />
+                    <label></label>
+                </div>
+                <a href="login.html"><button>Sign Up</button></a>
+                
+                
             </div>
         </div>
     </div>

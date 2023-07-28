@@ -21,6 +21,18 @@
             justify-content: center;
             align-items: center;
         }
+        /* Add some padding to the right of the input fields to accommodate the toggle icons */
+        .infield input {
+            padding-right: 30px;
+        }
+        /* Position the toggle icons */
+        .toggle-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -37,15 +49,19 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <p>or use your account</p>
-                <div class="infield">
-                    <input type="email" placeholder="Email" name="email" />
-                    <label></label>
-                </div>
-                <div class="infield">
-                    <input type="password" placeholder="Password" />
-                    <label></label>
-                </div>
-                <a href="index.html"><button>Login</button></a>
+                <form action="login.php" method="post"> <!-- Add method="post" and fix the form action -->
+                    <div class="infield">
+                        <input type="email" placeholder="Email" name="email" required />
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="password" placeholder="Password" name="password" required />
+                        <label></label>
+                        <!-- Add the toggle icon for the password field -->
+                        <i class="fas fa-eye toggle-icon" onclick="togglePasswordVisibility('password')"></i>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
                 <a href="#" class="forgot">Forgot your password?</a>
                 <div class="create-account">
                     <p>Don't have an account?</p>
@@ -54,5 +70,9 @@
             </div>
         </div>
     </div>
+
+    <script src="scripts/form.js"></script>
+    <?php include "login.php"; ?>
+    
 </body>
 </html>

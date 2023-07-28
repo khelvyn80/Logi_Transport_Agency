@@ -42,49 +42,46 @@
   <main>
     <div id="content"></div>
     <p>WHERE WOULD YOU LIKE TO GO TO?</p>
-    <div class="container">
+    <form action="display_details.php" method="post">
       <div class="row">
         <div class="col">
-          <!-- <label for="fromSelect">Traveling From:</label> -->
-          <select id="fromSelect">
+          <select id="fromSelect" name="travelingFrom">
             <option disabled selected>Traveling From</option>
-            <option value="acc">Accra</option>
-            <option value="kum">Kumasi</option>
-            <option value="cap">Cape Coast</option>
-            <option value="tak">Takoradi</option>
-            <option value="sun">Sunyani</option>
-            <option value="kof">Koforidua</option>
-            <option value="ho">Ho</option>
-            <option value="tam">Tamale</option>
-            <option value="bol">Bolgatanga</option>
-            <option value="wa">Wa</option>
+            <option value="Accra">Accra</option>
+            <option value="Kumasi">Kumasi</option>
+            <option value="Cape Coast">Cape Coast</option>
+            <option value="Takoradi">Takoradi</option>
+            <option value="Sunyani">Sunyani</option>
+            <option value="Koforidua">Koforidua</option>
+            <option value="Ho">Ho</option>
+            <option value="Tamale">Tamale</option>
+            <option value="Bolgatanga">Bolgatanga</option>
+            <option value="Wa">Wa</option>
           </select>
         </div>
         <div class="col">
-          <!-- <label for="toSelect">Traveling To:</label> -->
-          <select id="toSelect">
+          <select id="toSelect" name="travelingTo">
             <option disabled selected>Traveling To</option>
-            <option value="acc">Accra</option>
-            <option value="kum">Kumasi</option>
-            <option value="cap">Cape Coast</option>
-            <option value="tak">Takoradi</option>
-            <option value="sun">Sunyani</option>
-            <option value="kof">Koforidua</option>
-            <option value="ho">Ho</option>
-            <option value="tam">Tamale</option>
-            <option value="bol">Bolgatanga</option>
-            <option value="wa">Wa</option>
+            <option value="Accra">Accra</option>
+            <option value="Kumasi">Kumasi</option>
+            <option value="Cape Coast">Cape Coast</option>
+            <option value="Takoradi">Takoradi</option>
+            <option value="Sunyani">Sunyani</option>
+            <option value="Koforidua">Koforidua</option>
+            <option value="Ho">Ho</option>
+            <option value="Tamale">Tamale</option>
+            <option value="Bolgatanga">Bolgatanga</option>
+            <option value="Wa">Wa</option>
           </select>
         </div>
         <div class="col">
-          <!-- <label for="dateInput">Date:</label> -->
           <input type="date" id="dateInput" name="selectedDate">
         </div>
         <div class="col">
-          <button id="submitButton">SUBMIT</button>
+          <button type="submit" id="submitButton"  onclick="return validateForm()" >SUBMIT</button>
         </div>
       </div>
-    </div>
+    </form>
   </main>
 
   <script src="scripts/script.js"></script>

@@ -1,0 +1,84 @@
+/* Reset some default styles */
+body, h1, h2, p, table {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color and center the receipt */
+.receipt {
+  margin: 30px auto;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Style the logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: black; /* Background color set to black */
+}
+
+/* Style the website name */
+h1 {
+  font-size: 28px;
+  margin: 20px 0 10px;
+  color:#3b5998;
+}
+
+/* Style the user's name and email */
+h2, p {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Style the contact details */
+p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Style the journey plans table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Style the button to go back */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.button:hover {
+  background-color: #45a049;
+}

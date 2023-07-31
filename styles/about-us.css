@@ -1,0 +1,48 @@
+/* Add any necessary styles for your existing navigation bar here */
+
+/* About Us Section Styles */
+#about {
+  background-color: #f9f9f9;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3b5998; /* Brand primary color */
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333; /* Body text color */
+}
+
+/* Add a border at the bottom of each paragraph for visual separation */
+p:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Add a call-to-action button to encourage engagement */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3e64ff; /* Brand primary color */
+  color: #fff; /* Text color on the button */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #3251d8; /* Slightly darker shade on hover */
+}
+
+/* Add any additional styles for the About Us section as needed */

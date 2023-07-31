@@ -19,7 +19,6 @@
       } else if (service === 'metrobusgh') {
         contentContainer.textContent = 'WELCOME TO METRO BUS GH';
       }
-      // Add more conditions for other services as needed
     }
 
     // Call the function when the page loads to set content based on the URL parameter

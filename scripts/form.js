@@ -1,9 +1,10 @@
  // JavaScript to toggle password visibility
-  function togglePasswordVisibility(inputId) {
-    const input = document.getElementById(inputId);
-    if (input.type === "password") {
-      input.type = "text";
-    } else {
-      input.type = "password";
-    }
+ function togglePW(inputName) {
+  var password = document.querySelector(`[name=${inputName}]`);
+
+  if (password.getAttribute('type') === 'password') {
+      password.setAttribute('type', 'text');
+  } else {
+      password.setAttribute('type', 'password');
   }
+}

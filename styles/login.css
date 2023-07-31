@@ -52,6 +52,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .sign-in-container h1 {
@@ -68,7 +69,7 @@
 }
 
 .social-container {
-    margin-top: 10px;
+    margin: 10px;
 }
 
 .social {
@@ -114,15 +115,15 @@
 .infield input:valid + label {
     transform: translateY(-20px);
     font-size: 12px;
-    color: #6c63ff;
+    color: #004a02;
 }
 
 button {
-    background-color: #6c63ff;
+    background-color: #3b5998;
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.2s ease;
@@ -130,11 +131,11 @@ button {
 }
 
 button:hover {
-    background-color: #5145c0;
+    background-color:#3b5998;
 }
 
 .forgot {
-    color: #6c63ff;
+    color: #3b5998;
     text-decoration: none;
     margin-top: 10px;
     font-size: 14px;
@@ -159,7 +160,7 @@ button:hover {
     font-size: 16px;
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 600;
-    color: #6c63ff;
+    color: #3b5998;
     margin-top: 10px;
 }
 
@@ -185,3 +186,16 @@ footer a {
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 600;
 }
+
+.message {
+    padding-top: 10px;
+    font-size: 15px;
+    
+}
+
+.login {
+    text-decoration: none;
+    color: #3b5998;
+    font-size: medium;
+}
+

@@ -108,3 +108,19 @@ p {
     margin-top: 15%; 
   }
 }
+
+/* Add some margin to the bottom of the .col containing the "View Journey Plans" button */
+
+
+button#viewButton {
+  height: 50px; /* Increase height */
+   /* Add padding on the top and down */
+  width: 200px;
+}
+
+.bb {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  height: 100vh;
+}

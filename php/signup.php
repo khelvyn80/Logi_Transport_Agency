@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } elseif ($password !== $confirmPassword) {
             echo "Passwords do not match.";
         } else {
-            // Establish database connection (you may need to adjust these settings)
             $db_host = "localhost";
             $db_username = "root";
             $db_password = "";
@@ -25,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 
-            // Check connection
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
@@ -39,17 +37,39 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if ($stmt->num_rows > 0) {
                 echo "Username or email already exists. Please choose a different one.";
             } else {
-                // Prepare and execute the SQL query
+                // Prepare and execute the SQL query to insert user details
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $stmt = $conn->prepare("INSERT INTO users (username, email, contact, password) VALUES (?, ?, ?, ?)");
                 $stmt->bind_param("ssss", $username, $email, $contact, $hashed_password);
 
                 if ($stmt->execute()) {
-                    // Redirect the user to login.html after successful sign-up
-                    header("Location: login.html");
-                    exit(); // Make sure to stop the script execution after redirection
+                    // Retrieve the newly created user's ID
+                    $user_id = $conn->insert_id;
+
+                    // Check if journey plan details are submitted
+                    if (isset($_POST["travelingFrom"]) && isset($_POST["travelingTo"]) && isset($_POST["selectedDate"])) {
+                        $travelingFrom = $_POST["travelingFrom"];
+                        $travelingTo = $_POST["travelingTo"];
+                        $selectedDate = $_POST["selectedDate"];
+
+                        // Prepare and execute the SQL query to insert journey plan details
+                        $stmt = $conn->prepare("INSERT INTO journey_plans (user_id, traveling_from, traveling_to, selected_date) VALUES (?, ?, ?, ?)");
+                        $stmt->bind_param("isss", $user_id, $travelingFrom, $travelingTo, $selectedDate);
+
+                        if ($stmt->execute()) {
+                            // Redirect the user to login.html after successful sign-up
+                            header("Location: ../login.html");
+                            exit();
+                        } else {
+                            echo "Error: " . $stmt->error;
+                        }
+                    } else {
+                        // Redirect the user to login.html after successful sign-up (without journey plan details)
+                        header("Location: ../login.html");
+                        exit();
+                    }
                 } else {
-                    echo "Error: " . $conn->error;
+                    echo "Error: " . $stmt->error;
                 }
             }
 
